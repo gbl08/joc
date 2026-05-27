@@ -49,3 +49,77 @@ body {
 .gameSection:hover {
     color: rgb(156, 156, 156);
 }
+
+
+.light-mode {
+    background-color: #efe4ff;
+    color: #2d0036;
+}
+
+.light-mode .navbar {
+    background-color: #caa7ff;
+}
+
+.light-mode .container div {
+    background-color: #dcc6ff;
+    border-color: #9c6bdb;
+    color: #2d0036;
+}
+
+.light-mode .navbar li a {
+    color: #2d0036;
+}
+
+.light-mode .navbar li a.active {
+    background-color: #9c6bdb;
+}
+#themeToggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+}
+.light-mode .navbar li a:hover:not(.active) {
+    background-color: #b98cff;
+}
+
+@media screen and(max-width: 600px) {
+
+    .container div {
+        width: 90% !important;
+        font-size: 120% !important;
+    }
+
+    canvas {
+        width: 300px;
+        height: 350px;
+    }
+
+    .navbar li {
+        float: none;
+        text-align: center;
+    }
+
+    .navbar li a {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+    .container div {
+        width: 70% !important;
+    }
+
+    canvas {
+        width: 500px;
+        height: 550px;
+    }
+
+    .navbar li a {
+        font-size: 16px;
+    }
+}
