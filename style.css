@@ -99,11 +99,6 @@ body::before {
 
 @media screen and (max-width: 600px) {
 
-    .container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
     .container div {
         width: 90% !important;
         font-size: 120% !important;
@@ -114,10 +109,22 @@ body::before {
     }
 
     canvas {
-    width: 800px;
-    height: 850px;
-    max-width: 95vw;
-}
+        width: 95vw;
+        max-width: 400px;
+        height: 400px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
 
     .navbar li a {
         padding: 10px 12px;
@@ -126,10 +133,6 @@ body::before {
 
     .gameSection {
         font-size: 18px;
-    }
-
-    body {
-        overflow-x: hidden;
     }
 
     body::before {
