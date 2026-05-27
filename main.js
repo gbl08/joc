@@ -194,9 +194,11 @@ function checkWin() {
 // click handling
 canvas.addEventListener("click", (e) => {
     const rect = canvas.getBoundingClientRect();
+const scaleX = canvas.width / rect.width;
+const scaleY = canvas.height / rect.height;
 
-    const x = Math.floor((e.clientX - rect.left) / cellSize);
-    const y = Math.floor((e.clientY - rect.top - uiHeight) / cellSize);
+const x = Math.floor(((e.clientX - rect.left) * scaleX) / cellSize);
+const y = Math.floor(((e.clientY - rect.top) * scaleY - uiHeight) / cellSize);
 
     if (y < 0) return;
     if (gameOver) return;
@@ -223,8 +225,12 @@ canvas.addEventListener("contextmenu", (e) => {
     e.preventDefault();
 
     const rect = canvas.getBoundingClientRect();
-    const x = Math.floor((e.clientX - rect.left) / cellSize);
-    const y = Math.floor((e.clientY - rect.top - uiHeight) / cellSize);
+
+const scaleX = canvas.width / rect.width;
+const scaleY = canvas.height / rect.height;
+
+const x = Math.floor(((e.clientX - rect.left) * scaleX) / cellSize);
+const y = Math.floor(((e.clientY - rect.top) * scaleY - uiHeight) / cellSize);
 
     if (y < 0) return;
 
