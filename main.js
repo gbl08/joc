@@ -200,6 +200,14 @@ const scaleY = canvas.height / rect.height;
 const x = Math.floor(((e.clientX - rect.left) * scaleX) / cellSize);
 const y = Math.floor(((e.clientY - rect.top) * scaleY - uiHeight) / cellSize);
 
+function getMousePos(e) {
+    const rect = canvas.getBoundingClientRect();
+
+    return {
+        x: (e.clientX - rect.left) * (canvas.width / rect.width),
+        y: (e.clientY - rect.top) * (canvas.height / rect.height)
+    };
+}
     if (y < 0) return;
     if (gameOver) return;
     if (grid[y][x].flagged) return;
@@ -225,13 +233,20 @@ canvas.addEventListener("contextmenu", (e) => {
     e.preventDefault();
 
     const rect = canvas.getBoundingClientRect();
-
 const scaleX = canvas.width / rect.width;
 const scaleY = canvas.height / rect.height;
 
 const x = Math.floor(((e.clientX - rect.left) * scaleX) / cellSize);
 const y = Math.floor(((e.clientY - rect.top) * scaleY - uiHeight) / cellSize);
 
+function getMousePos(e) {
+    const rect = canvas.getBoundingClientRect();
+
+    return {
+        x: (e.clientX - rect.left) * (canvas.width / rect.width),
+        y: (e.clientY - rect.top) * (canvas.height / rect.height)
+    };
+}
     if (y < 0) return;
 
     let cell = grid[y][x];
