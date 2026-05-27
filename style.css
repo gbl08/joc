@@ -114,9 +114,10 @@ body::before {
     }
 
     canvas {
-        width: 95vw;
-        height: auto;
-    }
+    width: 800px;
+    height: 850px;
+    max-width: 95vw;
+}
 
     .navbar li a {
         padding: 10px 12px;
