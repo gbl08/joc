@@ -85,29 +85,40 @@ body {
     background-color: #b98cff;
 }
 
-@media screen and(max-width: 600px) {
+@media screen and (max-width: 600px) {
+
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
 
     .container div {
         width: 90% !important;
         font-size: 120% !important;
     }
 
-    canvas {
-        width: 300px;
-        height: 350px;
+    h1 {
+        font-size: 40px;
     }
 
-    .navbar li {
-        float: none;
-        text-align: center;
+    canvas {
+        width: 95vw;
+        height: auto;
     }
 
     .navbar li a {
-        padding: 10px;
+        padding: 10px 12px;
         font-size: 14px;
     }
-}
 
+    .gameSection {
+        font-size: 18px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
 @media screen and (min-width: 601px) and (max-width: 1024px) {
 
     .container div {
